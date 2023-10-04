@@ -1,1 +1,1 @@
-team c14-45-t-python
+team c14-45-t-python ecommerce project
