@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
-import { Button, Toolbar, AppBar, Grid, IconButton, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Button, Toolbar, AppBar, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 
 const BarTwo = () => {
 	return (
 		<>
-			<AppBar position="static">
+			<AppBar position="static" color="background">
 				<Toolbar>
-					<Grid container spacing={3}>
+					<Grid container>
 						<Grid item xs={6} md={6} lg={6}>
-							<Grid container spacing={3} justifyContent="flex-start">
-								<Grid item xs={2} md={2} lg={2}>
+							<Grid container justifyContent="flex-start">
+								<Grid item xs={4} md={4} lg={4}>
 									<FormControl fullWidth>
 										<InputLabel color='secondary'>Categorias</InputLabel>
 										<Select
@@ -27,28 +26,17 @@ const BarTwo = () => {
 									</FormControl>
 								</Grid>
 								<Grid item xs={2} md={2} lg={2}>
+									<Button variant="text" color='secondary'>Rebajas</Button>
+								</Grid>
+								<Grid item xs={2} md={2} lg={2}>
 									<Button variant="text" color='secondary'>Remates</Button>
 								</Grid>
 							</Grid>
 						</Grid>
-						<Grid item xs={6} md={6} lg={6}>
-							<Grid container spacing={3} justifyContent="flex-end">
-								<Grid item xs={2} md={2} lg={2}>
-									<Link to='login'>
-										<Button variant="text" color='secondary'>Iniciar Sesion</Button>
-									</Link>
-								</Grid>
-								<Grid item xs={2} md={2} lg={2}>
-									<Link to='register'>
-										<Button variant="contained" color='secondary'>Registrarse</Button>
-									</Link>
-								</Grid>
-								<Grid item xs={2} md={2} lg={2}>
-									<IconButton>
-										<ShoppingCartIcon fontSize='large' />
-									</IconButton>
-								</Grid>
-							</Grid>
+						<Grid item xs={6} md={6} lg={6} textAlign={'right'}>
+							<CreditCardIcon fontSize='medium' />
+							<CreditCardIcon fontSize='medium' />
+							<CreditCardIcon fontSize='medium' />
 						</Grid>
 					</Grid>
 				</Toolbar>

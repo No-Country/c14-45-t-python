@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 const theme = createTheme({
 	palette: {
 		primary: {
-			main: '#FFF',
-		}
+			main: '#1E5F3C',
+		},
+		secondary: {
+			main: '#E3B23C',
+		},
+		background: {
+			default: '#AAAAAA',
+		},
 	},
 });
 

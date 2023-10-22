@@ -3,22 +3,36 @@ import { Grid } from '@mui/material';
 
 import BarOne from './BarOne';
 import BarTwo from './BarTwo';
+import BarFooter from './BarFooter';
 
 const MainLayout = () => {
 	return (
-		<>
-			<Grid container>
-				<Grid item xs={12} md={12} lg={12}>
-					<BarOne />
+		<div id="page-container">
+			<header id="header-wrap">
+				<Grid container>
+					<Grid item xs={12} md={12} lg={12}>
+						<BarOne />
+					</Grid>
+					<Grid item xs={12} md={12} lg={12}>
+						<BarTwo />
+					</Grid>
 				</Grid>
-				<Grid item xs={12} md={12} lg={12}>
-					<BarTwo />
+			</header>
+			<section id="content-wrap">
+				<Grid container>
+					<Grid item xs={12} md={12} lg={12}>
+						<Outlet />
+					</Grid>
 				</Grid>
-			</Grid>
-			<section>
-				<Outlet />
 			</section>
-		</>
+			<footer id="footer-wrap">
+				<Grid container>
+					<Grid item xs={12} md={12} lg={12} >
+						<BarFooter />
+					</Grid>
+				</Grid>
+			</footer>
+		</div>
 	)
 }
 
