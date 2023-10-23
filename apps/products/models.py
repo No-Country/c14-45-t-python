@@ -46,6 +46,7 @@ class Product (models.Model):
     subcategory = models.ForeignKey(Subcategory, on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    description = models.TextField(max_length=300, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
