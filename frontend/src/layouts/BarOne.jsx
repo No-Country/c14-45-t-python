@@ -41,7 +41,6 @@ const BarOne = () => {
 
 export const LoginButtons = () => {
 	const { authUser, isLoggedIn } = useAuth();
-	console.log('ACA:::', isLoggedIn)
 	if (!isLoggedIn) {
 		return (
 			<>
@@ -61,7 +60,7 @@ export const LoginButtons = () => {
 
 	return (
 		<Grid item xs={8} md={8} lg={8}>
-			Bienvenido: { authUser }
+			Bienvenido: {authUser}
 		</Grid>
 	)
 }
