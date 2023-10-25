@@ -10,12 +10,15 @@ import './index.css'
 
 import Router from './Router.jsx';
 import Theme from './Theme';
+import { AuthProvider } from './contexts/AuthContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CssBaseline />
-    <Theme>
-      <Router />
-    </Theme>
+    <AuthProvider>
+      <Theme>
+        <Router />
+      </Theme>
+    </AuthProvider>
   </React.StrictMode>,
 )
