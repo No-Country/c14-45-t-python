@@ -1,7 +1,11 @@
 import { Button, Toolbar, AppBar, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import CategoriesHook from '../hooks/CategoriesHook';
+
 
 const BarTwo = () => {
+	const [categories] = CategoriesHook();
+	console.log(categories);
 	return (
 		<>
 			<AppBar position="static" color="background">
@@ -18,10 +22,9 @@ const BarTwo = () => {
 											defaultValue={0}
 										>
 											<MenuItem value={0}>Todas</MenuItem>
-											<MenuItem value={1}>Categoria 1</MenuItem>
-											<MenuItem value={2}>Categoria 2</MenuItem>
-											<MenuItem value={3}>Categoria 3</MenuItem>
-											<MenuItem value={4}>Categoria 4</MenuItem>
+											{categories && categories.map((category) => (
+												<MenuItem key={category.id} value={category.id}>{category.category}</MenuItem>
+											))}
 										</Select>
 									</FormControl>
 								</Grid>
