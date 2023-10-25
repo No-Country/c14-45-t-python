@@ -1,5 +1,5 @@
 import { Button, Toolbar, AppBar, Grid } from '@mui/material';
-import Logo from '/logo.svg'
+import LogoFooterCircle from '/logo-footer-circle.svg'
 
 const BarFooter = () => {
 	return (
@@ -32,7 +32,7 @@ const BarFooter = () => {
 							</Grid>
 						</Grid>
 						<Grid item xs={6} md={6} lg={6} textAlign={'right'}>
-							<img src={Logo} className="footer-logo" />
+							<img src={LogoFooterCircle} className="footer-logo" />
 						</Grid>
 					</Grid>
 				</Toolbar>

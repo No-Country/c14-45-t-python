@@ -5,7 +5,6 @@ import CategoriesHook from '../hooks/CategoriesHook';
 
 const BarTwo = () => {
 	const [categories] = CategoriesHook();
-	console.log(categories);
 	return (
 		<>
 			<AppBar position="static" color="background">
