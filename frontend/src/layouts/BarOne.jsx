@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Button, InputAdornment, TextField, Toolbar, AppBar, Grid } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import LogoHome from '/logo-home.svg'
-import { useAuth } from '../contexts/AuthContext';
+import LogoHome from '/logo-home.png'
+import useAuth from '../contexts/GetAuthContext';
 
 const BarOne = () => {
 	return (
@@ -60,6 +60,9 @@ export const LoginButtons = () => {
 
 	return (
 		<Grid item xs={8} md={8} lg={8}>
+			<Link to='products'>
+				<Button variant="contained" color='secondary'>Tus Productos</Button>
+			</Link>
 			Bienvenido: {authUser}
 		</Grid>
 	)

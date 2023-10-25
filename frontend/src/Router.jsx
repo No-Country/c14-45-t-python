@@ -7,6 +7,7 @@ import Home from './modules/home/Home';
 import Login from './modules/auth/Login';
 import Register from './modules/auth/Register';
 import Contact from './modules/contact/Contact';
+import Products from './modules/products/Products';
 
 const router = createBrowserRouter([
 	{
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
 			{
 				path: 'contact',
 				element: <Contact />,
+			},
+			{
+				path: 'products',
+				element: <Products />,
 			}
 		],
 	}
