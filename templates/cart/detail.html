@@ -1,0 +1,10 @@
+<h1>Carrito de Compras</h1>
+<ul>
+    {% for cart_item in cart.cartitem_set.all %}
+        <li>
+            {{ cart_item.product.name }} ({{ cart_item.quantity }} x ${{ cart_item.product.price }})
+        </li>
+    {% endfor %}
+</ul>
+<p>Total: ${{ cart.total }}</p>
+<a href="{% url 'checkout' %}">Finalizar Compra</a>

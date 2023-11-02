@@ -23,4 +23,5 @@ urlpatterns = [
     re_path('', include('apps.products.urls')),
     re_path('', include('apps.users.urls')),
     re_path('', include('apps.orders.urls')),
+    re_path('', include('apps.carts.urls')),
 ]
